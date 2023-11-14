@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Select Project</title>
+    <style>
+        body {
+  background-color: #81a2f2;
+}
+
+h1 {
+  font-family: "Bungee", sans-serif;
+  font-size: 1.5rem;
+  margin: center;
+  text-align: center;
+}
+
+div#container {
+  background-color: beige;
+  border: 8px dotted blue;
+  border-radius: 5%;
+  width: 50%;
+  margin: auto;
+  padding: 1%;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+
+select {
+  text-align: center;
+  width: 55%;
+  font-size: 1.5rem;
+  background-color: blue;
+  color: white;
+  margin-left: 25%;
+}
+
+    </style>
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Bungee&family=Nosifer&family=Varela+Round&display=swap" rel="stylesheet">
+
+<h1>Choose your FIGHTER</h1>
+<div id="container">
+  <img src="" width="200" height="200" id="character-image" alt="character-select-image" />
+  <select name="image-choice" id="image-select">
+    <option value="" disabled selected>Select Character</option>
+    <option value="mario-cat">Mario Cat</option>
+
+    <option value="mario-astro">Astronaut Mario</option>
+
+    <option value="mario-raccoon">Tanooki Mario</option>
+
+    <option value="pink-peach">Princess Peach</option>
+
+    <option value="dk-ice">Ice Donkey Kong</option>
+
+    <option value="pacman">PacMan</option>
+
+    <option value="pikachu-sleeping">Pikachu</option>
+
+    <option value="scream-img">Scream</option>
+
+    <option value="matt-wii">Mii</option>
+  </select>
+</div>
+    <script>
+        const imageSelect = document.getElementById("image-select");
+const characterImg = document.getElementById("character-image");
+
+const mattWiiSrc =
+  "https://drive.google.com/uc?export=view&id=17RAfK8B2LDW_AWECxqmAiAxuJkHOV_5C";
+
+const pikachuSleepingSrc =
+  "https://drive.google.com/uc?export=view&id=13sjrvZJfjdz-nAHya133blUlT_II3PP3";
+// "https://drive.google.com/file/d/13sjrvZJfjdz-nAHya133blUlT_II3PP3/view"
+
+const screamSrc =
+  "https://drive.google.com/uc?export=view&id=1CXWD2IwCvVAsrsElqD556ro9kp7SW_eP";
+
+const marioRaccoonSrc =
+  "https://drive.google.com/uc?export=view&id=1Zehno27FMtG5hDd-TyFRky9wyv53lcHj";
+const marioCatSrc =
+  "https://drive.google.com/uc?export=view&id=1ZgigMQZ1CmJVYNhZ6vaz7eiKk9ZjfNlY";
+const marioAstroSrc =
+  "https://drive.google.com/uc?export=view&id=1ZpeukvmCIX8dy_2md0zDO8rkKZoLHfRT";
+const peachWeddingSrc =
+  "https://drive.google.com/uc?export=view&id=1_2ZQiL4XlmPUI4UEW2fqvRFk4078cErK";
+const peachPinkSrc =
+  "https://drive.google.com/uc?export=view&id=1_4CcPhxb5oAa6Myzh8MZv2Fe7nWiupI_";
+const peachFireSrc =
+  "https://drive.google.com/uc?export=view&id=1_HjCzHSVvQadyuzQeNqCncP8ULKVBtWj";
+const dkIceSrc =
+  "https://drive.google.com/uc?export=view&id=1_Z1aNb5oK-MqI3hmqF_-Ba4tPWjkhAtD";
+const dkFireSrc =
+  "https://drive.google.com/uc?export=view&id=1_bE8cmnBAj1hYNmV_SRnun8NpDZCOMHF";
+const dkBlackSrc =
+  "https://drive.google.com/uc?export=view&id=1_f3Xb2c5vmEXk4l4XEs3RvhQONNxdVpx";
+
+const pacManSrc =
+  "https://drive.google.com/uc?export=view&id=1SEh3an5LQGh87xkgLRxb0dLLwfr069aW";
+
+const characterSelectSrc =
+  "https://drive.google.com/uc?export=download&id=1ayfmqbm6-Ab2ws71xBS2SFHoGNdBJNOE";
+
+characterImg.src = peachFireSrc;
+
+imageSelect.addEventListener("change", function () {
+  console.log(this.value);
+  let userChoice = this.value;
+  if (userChoice === "mario-cat") {
+    characterImg.src = marioCatSrc;
+  } else if (userChoice === "mario-astro") {
+    characterImg.src = marioAstroSrc;
+  } else if (userChoice === "mario-raccoon") {
+    characterImg.src = marioRaccoonSrc;
+  } else if (userChoice === "pink-peach") {
+    characterImg.src = peachPinkSrc;
+  } else if (userChoice === "pacman") {
+    characterImg.src = pacManSrc;
+    pacmanAudio.src;
+  } else if (userChoice === "pikachu-sleeping") {
+    characterImg.src = pikachuSleepingSrc;
+  } else if (userChoice === "scream-img") {
+    characterImg.src = screamSrc;
+  } else if (userChoice === "matt-wii") {
+    characterImg.src = mattWiiSrc;
+  } else if (userChoice === "dk-ice") {
+    characterImg.src = dkIceSrc;
+  }
+});
+
+    </script>
+</body>
+</html>
